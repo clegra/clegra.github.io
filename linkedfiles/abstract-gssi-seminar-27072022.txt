@@ -1,0 +1,14 @@
+-----------------------------------------------------------------------------
+Milner's Proof System for Regular Expressions Modulo Bisimilarity is Complete
+  (CS@GSSI seminar)
+-----------------------------------------------------------------------------
+In this short (12-15 minutes') presentation that I prepare for the conference LICS I can only give a flavor of the completeness proof for Milner's proof system for regular expression modulo bisimilarity. But I want to describe the crucial observation that led me to a solution.
+
+First I will explain the process interpretation of regular expressions, illustrate it by simple examples, and give Milner's equational proof system for bisimilarity of process interpretations of regular expressions. Then I will summarize the "structure-constrained bisimulation-collapse" proof strategy that is based on the "layered loop-existence and elimination property LLEE". While that strategy was successful to obtain a completeness proof for the adaptation of Milner's system to "1-free" regular expressions (G/Fokkink, 2020), it now needed to be refined and adapted substantially. The reason is that the property LLEE is not preserved under bisimulation collapse of process graphs with 1-transitions. I will show a concrete counterexample, and explain how I found it.
+
+From the, in some sense, symmetric form of the counterexample I abstracted the concept of `twin-crystal'. While twin-crystals are not bisimulation collapsed, they are `near-collapsed', and provide access to provable solutions of their bisimulation collapses. Crucially, a `crystallization procedure' is possible: every finite process graph with LLEE can be reduced under bisimilarity to a `crystallized' process graph that is collapsed apart from (any number of) strongly connected components of twin-crystal form.  
+
+Finally I will apply these, and a few other lemmas to form a pyramid-shaped picture that explains the structure of the proof that Milner's system is complete.
+
+Supplementing my presentation at LICS, I have also registered to give a poster presentation at LICS on the next day. After my seminar talk I can show my poster draft, perhaps also to answer any questions that might arise.
+-------------------------------------------------------------------------------------
