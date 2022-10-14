@@ -16,7 +16,7 @@
   <body style="background-color:silver;">
 
 
-<H1>Publications and Scientific Work by Clemens Grabmayer</H1>
+<H1>Publications and Scientific Work by Clemens Grabmayer (and co-authors)</H1>
 
 <P>
 <!--
@@ -57,6 +57,12 @@ the explicit permission of the copyright holder.
   <li>
     <a href="#talks">Talks</a>
   <li> (<a href="#pizzo-cefalone">picture taken on the top of Pizzo Cefalone</a>)
+  <li>
+    <a href="#tools">References to software tools written by Jan Rochel
+                     developed in the NWO-project ROS</a>
+    </li>
+
+
 </ul>
 
 </div>
@@ -1321,6 +1327,56 @@ Here you find a
 
 
 
+
+<div>
+<hr>
+<H3 id="tools">References to software tools written by Jan Rochel developed in the NWO-project ROS</H3>
+
+  During our joint work on the NWO-project <em>Realising Optimal Sharing (ROS)</em> (2009-2014)
+    <a href="http://rochel.info">Jan Rochel</a> developed the following very useful software tools:
+
+  <ul>
+    <li> Maximal sharing implementation, and illustration
+         (available
+          via <a href="http://hackage.haskell.org/package/maxsharing">this link<a>
+          on <a href="http://hackage.haskell.org">Hackage</a>):
+
+      <p><small>
+        This tool is a prototype implementation of the maximal-sharing operation for functional programs
+          in the λ-calculus with letrec as defined in our <a href="./linkedfiles/maxsharing-ICFP-proceedings.pdf">ICFP 2014 paper</a>.
+        Following the definition of maximally shared representations of such functional programs
+        via a ‘representation pipeline’,
+        the tool transforms a given functional program in the Core language of the λ-calculus with letrec
+        into a term graph, and subsequently into a deterministic finite-state automaton (DFA).
+        It prints intermediate representations, and graphically displays the obtained DFA.
+        This DFA is then minimized, and finally a maximally shared representation
+        of the original program is computed as the result.
+      </small></p>
+
+
+    <li> Port graph rewriting in Haskell
+      (see <a href="http://rochel.info/docs/graph-rewriting.pdf">explanatory technical report</a>,
+       suite available <a href="http://hackage.haskell.org/">Hackage</a>
+       please find links on <a href="http://rochel.info/">Jan Rochel's webpage</a>):
+
+      <p><small>
+        This is an animation tool for displaying and transforming port graphs
+        (a general framework for graph transformations),
+        and for carrying out rewrite-rule based transformations on these graphs per mouse-click.
+       It produces beautifully rendered graphs that slowly float over the screen like bacteria in a liquid under a microscope.
+         </small></p>
+  </ul>
+
+  For more information on these tools and our joint work, please visit <a href="http://rochel.info">Jan Rochel's webpage</a>.
+<hr>
+</div>
+
+
+
+<br>
+
+
+
 <hr>
 <address>
   Clemens Grabmayer
@@ -1336,7 +1392,7 @@ href="https://clegra.github.io">https://clegra.github.io</a>
   <FONT color=darkgreen>gmail</FONT> one dot
   <FONT color=darkgreen>com</FONT>
   /
-  Last modified: Thu 13 Oct 2022 21:04 CEST
+  Last modified: Fri 14 Oct 2022 09:31 CEST
   / <a title="Google Analytics Alternative" href="https://clicky.com/101377364"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
   <script async src="//static.getclicky.com/101377364.js"></script>
   <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101377364ns.gif" /></p></noscript>
