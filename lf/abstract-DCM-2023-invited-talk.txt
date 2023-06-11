@@ -13,7 +13,7 @@ and forth easily between terms/expressions and term-graphs/process-graphs.
 They respect the appertaining operational semantics, but were conceived
 with specific purposes in mind: to optimize functional programs in the
 Lambda Calculus with letrec; and to reason with process graphs denoted
-by regular expressions, and decide recognizability of these graphs.
+by regular expressions, and to decide recognizability of these graphs.
 
 For the definition, and efficient implementation of maximal sharing for
 the higher-order terms in the lambda calculus with letrec, Jan Rochel
@@ -26,7 +26,7 @@ forms of higher-order terms can be computed.
 
 In Milner's process semantics, regular expressions are interpreted as
 nondeterministic finite-state automata (NFAs) whose equality is studied
-under bisimulation. Unlike for the standard language interpretation,
+modulo bisimulation. Unlike for the standard language interpretation,
 not every NFA can be expressed by a regular expression. This raised a
 non-trivial recognition (or expression) problem, which was formulated
 by Milner (1984) next to a completeness problem for an equational
