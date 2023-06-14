@@ -4,7 +4,7 @@ From Compressing Lambda-Letrec Terms
 =========================================================================
 
 I want to explain a transferal of ideas from finding graph
-representations for terms in the Lamba Calculus with letrec, a universal
+representations for terms in the Lambda Calculus with letrec, a universal
 model of computation, to understanding process graphs that can be
 expressed by regular expressions (via Milner's process interpretation),
 a proper subclass of finite-state processes. In both cases structure-
