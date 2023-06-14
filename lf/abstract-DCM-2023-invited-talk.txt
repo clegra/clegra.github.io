@@ -3,7 +3,7 @@ From Compressing Lambda-Letrec Terms
   to Recognizing Regular-Expression Processes
 =========================================================================
 
-I want to explain a transferral of ideas from finding graph
+I want to explain a transferal of ideas from finding graph
 representations for terms in the Lamba Calculus with letrec, a universal
 model of computation, to understanding process graphs that can be
 expressed by regular expressions (via Milner's process interpretation),
@@ -19,10 +19,10 @@ For the definition, and efficient implementation of maximal sharing for
 the higher-order terms in the lambda calculus with letrec, Jan Rochel
 and I formulated a representation-pipeline, as follows. Higher-order
 terms can be represented by, appropriately defined, higher-order term
-graphs, that those can be encoded as first-order term graphs, and that
-these can in turn be represented as deterministic finite-state automata
-(DFAs). Via these correspondences and DFA minimization, maximal shared
-forms of higher-order terms can be computed.
+graphs, those can be encoded as first-order term graphs, and these
+can in turn be represented as deterministic finite-state automata (DFAs).
+Via these correspondences and DFA minimization, maximal shared forms of
+higher-order terms can be computed.
 
 In Milner's process semantics, regular expressions are interpreted as
 nondeterministic finite-state automata (NFAs) whose equality is studied
