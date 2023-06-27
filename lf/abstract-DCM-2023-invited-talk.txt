@@ -1,5 +1,5 @@
 =========================================================================
-From Compressing Lambda-Letrec Terms
+From Compactifying Lambda-Letrec Terms
   to Recognizing Regular-Expression Processes
 =========================================================================
 
