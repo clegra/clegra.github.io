@@ -8,8 +8,38 @@
         max-width: 100%;
         height: auto;
         width: auto\9; /* ie8 */
+        }
+    details {
+    font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
+    width: 700px;
     }
-    </style>
+
+    details > summary {
+    padding: 2px 6px;
+    width: 15em;
+    background-color: #ddd;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+    }
+
+    details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 3px 3px 4px black;
+    }
+
+    details[open] > summary {
+    background-color: #ccf;
+    }
+</style>
+
+    
   </head>
 
   <body style="background-color:silver;">
@@ -524,9 +554,11 @@ the explicit permission of the copyright holder.
   <li>Jan Rochel and Clemens Grabmayer:
       <EM>Avoiding Repetitive Evaluation Patterns in Lambda Calculus with Letrec</EM>
       (Work in Progress), presented at the workshop TERMGRAPH 2011, 2 April 2011, Saarbr&uuml;cken,
-      Electronic Proceedings in Theoretical Computer Science (<a href="http://eptcs.org/content.cgi?TERMGRAPH2011">EPTCS 48</a>, <a href="http://dx.doi.org/10.4204/EPTCS.48">doi:10.4204/EPTCS.48</a>),
-      (arXiv-ed at: <a href="http://dx.doi.org/10.4204/EPTCS.48.9">http://dx.doi.org/10.4204/EPTCS.48.9</a>,
-       <a href="./lf/termgraph-2011.pdf">pdf local-copy</a>) .
+      <!-- Electronic Proceedings in Theoretical Computer Science 48 -->
+      <a href="http://eptcs.org/content.cgi?TERMGRAPH2011">EPTCS 48</a>
+      (<a href="http://dx.doi.org/10.4204/EPTCS.48">proceedings via arXiv</a>),
+      (<a href="http://dx.doi.org/10.4204/EPTCS.48.9">pdf article via arXiv</a>,
+      <a href="./lf/termgraph-2011.pdf">pdf article local-copy</a>).
   </li>
 
 </ol>
@@ -1426,7 +1458,7 @@ Here you find a
       Extended Abstract
       (<a href="./lf/sc.pdf">pdf</a>, and <a href="./lf/sc-old-version.pdf">pdf early easier version</a>)
       for this short contribution.
-      <br><br>
+      <br>
       <details>
         <summary><b>Corrigendum</b> (slides 8 and 20)</summary>
 	  <p>
@@ -1670,7 +1702,7 @@ href="https://clegra.github.io">https://clegra.github.io</a>
   <FONT color=darkgreen>gmail</FONT> one dot
   <FONT color=darkgreen>com</FONT>
   /
-  Last modified: Sun 19 May 2024 16:27 CEST
+  Last modified: Sun 19 May 2024 16:45 CEST
   /
   <a href="https://validator.w3.org/check?uri=https%3A%2F%2Fclegra.github.io%2Fpublications.html"><img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
 
