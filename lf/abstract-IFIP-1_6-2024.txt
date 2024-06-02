@@ -1,0 +1,38 @@
+===============================================================================
+Clemens Grabmayer:
+The Graph Structure of Process Interpretations of Regular Expressions
+
+Abstract for my presentation at the IFIP working group 1.6 meeting
+Nancy, July 1, 2024
+-------------------------------------------------------------------------------
+Center-stage of my talk will be a structural property of process graphs that
+are interpretations of regular expressions: the loop existence and elimination
+condition (LEE). It turned out to be instrumental for tackling axiomatization
+and recognition problems for Milner's process semantics of regular expressions.
+Next to indicating its role in my work on these problems, I want to explain how
+concepts and ideas from rewriting are crucial for the definition of LEE and the
+study of its properties.
+
+LEE is defined by a terminating loop-subgraph-elimination rewrite system. This
+system can be completed into a confluent system, which entails that LEE is
+efficiently decidable. Process interpretations of regular expressions satisfy
+LEE if they are `under-star-1-free', and in general if they satisfy a
+refinement property 1-LEE, which requires of a process graph to be refinable
+into a graph with LEE by means of increasing sharing through added
+1-transitions (empty steps). `LEE-witnesses' are labelings of process graphs
+that satisfy LEE. They guarantee expressibility by a regular expression: every
+process graph G with a LEE-witness facilitates the efficient extraction of a
+regular expression whose process interpretation is bisimilar to G. Two further
+lemmas are of critical importance for obtaining completeness results. First,
+LEE is preserved under bisimulation collapse; this can be established by a
+stepwise collapse procedure. However, second, 1-LEE is not preserved under
+bisimulation collapse.
+
+Finally I report on a recent technical refinement of the extraction procedure
+that permits to understand LEE/1-LEE as characteristic properties for the
+restricted/unrestricted images of a (slightly more) compact version of the
+process interpretation. LEE (and resp. 1-LEE) characterizes those process
+graphs that are isomorphic to compact process interpretations of under-star-
+1-free regular expressions (resp. that refine compact process interpretations
+of arbitrary regular expressions).
+===============================================================================
