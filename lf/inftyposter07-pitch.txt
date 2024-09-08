@@ -1,0 +1,22 @@
+************************************************************************
+
+C.G. for project `Infinity': We are interested in infinite mathematical
+objects such as infinite sequences and infinite trees.
+An example you can see right on top: the famous Thue Morse sequence,
+a stream of zeros and ones that is aperiodic, full of symmetries, and
+can be visualised as a beautiful mosaic.
+
+The project links together three research groups in Amsterdam and
+Utrecht as well as three different fields: term rewriting, coalgebra,
+and proof theory.
+
+To mention only one result: we just submitted a paper concerning
+the question of `productivity': How can it be recognised whether
+a given stream definition evaluates to a unique infinite stream?
+This is an undecidable problem. But for a rich subclass we have found
+and implemented a substantially new decision algorithm that can be
+useful for functional programming practice.
+
+For more information, search "BRICKS Infinity Project".
+
+************************************************************************
