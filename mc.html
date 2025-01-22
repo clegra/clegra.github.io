@@ -34,6 +34,9 @@
     details[open] > summary {
     background-color: #ccf;
     }
+    li{
+    margin: 1px 0;
+    }
 </style>
 
     
@@ -124,17 +127,42 @@
 <ol>
   <li>
     Introduction
-    
-  <li>
-    Transition systems
-    
-  <li>
-    Linear-Time Properties
     <ul>
       <li>
-	safety properties
+	motivation for model checking
       <li>
-	liveness properties
+	difference with simulation and testing
+      <li>
+	glance at model checking with temporal logics
+    </ul>  
+    
+  <li>
+    Modeling by labeled transition systems
+    <ul>
+      <li>
+	modeling by Labeled Transition Systems (LTSs)
+	<ul>
+          <li>
+	    exections, traces,
+	  <li>
+	    non-determinism
+	  <li>
+	    examples
+	</ul> 
+	
+    </ul>  
+    
+  <li>
+    Linear-Time Behavior &amp; Properties
+    <ul>
+      <li>
+	path fragments and paths
+      <li>
+	invariant, safety, and liveness properties
+      <li>
+	every LT-property is the intersection of a safety and a liveness property  
+      <li>
+	fairness
     </ul>  
 
   <li>
@@ -189,7 +217,7 @@
       <li>
 	CTL<sup>*</sup></li>
       <li>
-        Venn diagram expressibility of LTL, CTL, CTL<sup>+</sup>, CTL<sup>*</sup>, and the &mu;&ndash;calculus
+        Venn diagram comparison of the expressibility of LTL, CTL, CTL<sup>+</sup>, CTL<sup>*</sup>, and the &mu;&ndash;calculus
       <li>
         Outlook, either of:
 	<ul>
@@ -220,12 +248,6 @@ in LTL Using a Tableau-Based Approach</em>
 
 
 
-
-<br>
-
-
-
-
 <hr>
 <address>
   Clemens Grabmayer
@@ -240,7 +262,7 @@ in LTL Using a Tableau-Based Approach</em>
   <FONT color=darkgreen>gmail</FONT> one dot
   <FONT color=darkgreen>com</FONT>
   /
-  Last modified: Tue 21 Jan 2024 18:11 CEST
+  Last modified: Wed 23 Jan 2024 09:20 CEST
   /<a href="https://validator.w3.org/check?uri=clegra.github.io%2Fmc.html"><img
       src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
   /
