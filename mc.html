@@ -130,33 +130,59 @@ Different daily slot times have been highlighted by different colors.
 
 
 <ul>
- <li>
-   <em>Laboratory of Formal Methods (2017/2018)</em>
-by <a href="http://disi.unitn.it/~trentin/">Patrick Trentin</a>
+  <li>
+    <em>Laboratory of Formal Methods (2017/2018)</em>
+    by <a href="http://disi.unitn.it/~trentin/">Patrick Trentin</a>
 of the <a href="https://www.unitn.it/en">University of Trento</a>:
 
-   <ul>
-     <li>
-       Webpage Laboratory of Formal Methods (2017/2018)
+    <ul>
+      <li>
+        Webpage Laboratory of Formal Methods (2017/2018)
 
-      <ul>
-	<li>
-          <a href="http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html"><tt>http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html</tt></a>
-      </ul>
-    
-     <li> slides lecture 1:
+        <ul>
+          <li>
+            <a href="http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html"><tt>http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html</tt></a>
+        </ul>
+      
+      <li> slides lecture 1:
           <a href="http://disi.unitn.it/~trentin/teaching/fm2018/lesson01/lesson01.pdf">SPIN: Introduction</a>
 	  
-     <li> slides lecture 4:
-          <a href="http://disi.unitn.it/~trentin/teaching/fm2018/lesson04/lesson04.pdf">SPIN: LTL Model Checking</a>
-   </ul>  
+      <li> slides lecture 4:
+       <a href="http://disi.unitn.it/~trentin/teaching/fm2018/lesson04/lesson04.pdf">SPIN: LTL Model Checking</a>
+
+    </ul>       
 
   <li>
     Webinterface 
     <a href="http://www.lsv.fr/~gastin/ltl2ba/index.php">LTL 2 BA : fast translation from LTL formulae to Büchi automata</a>
     for tool LTL2BA by Denis Oddoux 
     using a technique of his and <a href="http://www.lsv.fr/~gastin/">Paul Gastin</a>.
-   
+
+     <li> Further reading:
+	<ul>
+	  <li>
+            partial model checking
+            &nbsp;&nbsp; [notes 2024 (<a href="./mc/23-24/notes-lecture-7-partial-model-checking.pdf">pdf</a>)]
+	    <ul>
+              <li>
+		the research paper
+		<em>Partial Model Checking and Partial Model Synthesis
+in LTL Using a Tableau-Based Approach</em>
+                 (<a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol260-fscd2023/LIPIcs.FSCD.2023.23/LIPIcs.FSCD.2023.23.pdf">link</a>) by Serenella Cerrito, Valentin Goranko, Sophie Paillocher at FSCD 2023 on partial model checking
+	    </ul>  
+
+	  <li>
+	    modal &mu;&ndash;calculus
+	    <ul>
+              <li>
+	        book chapter
+                <em>The mu-calculus and model-checking</em>
+		(<a href="https://www.labri.fr/perso/igw/Papers/igw-mu.pdf">link</a>)
+		by
+                Julian Bradfield and Igor Wa&#322;ukiewicz.
+	    </ul>  
+	</ul>
+   </ul>    
 </ul>
 
 
@@ -302,40 +328,71 @@ of the <a href="https://www.unitn.it/en">University of Trento</a>:
     </ol>	 
     
   <li>
-    CTL continued &amp; Outlook	
+    CTL<sup>+</sup>, CTL<sup>*</sup>, and CTL-model checking
       &nbsp;&nbsp; 
-            &nbsp;&nbsp; [notes 2024 (<a href="./mc/23-24/notes-lectures-6-and-7.pdf">pdf</a>)]
+            &nbsp;&nbsp; [notes (<a href="./mc/24-25/lecture-7-notes.pdf">pdf</a>)]
     <ul>
+      <li> Extensions of CTL
+	<ul>
+          <li> CTL<sup>+</sup>
+	    <ul>
+	      <li>
+		is equally expressibe as CTL (proof idea via translation of CTL<sup>+</sup> formulas into CTL formulas
+            </ul>	
+	
+         <li>
+	   CTL<sup>*</sup></li>
+           <ul>
+	     <li>
+	       is more expressive as CTL
+	     <li>
+	       encompasses LTL by starting with a &forall; path quatifier
+           </ul>
+        </ul>      	   
+      
       <li>
-	CTL<sup>+</sup>
+	example for finding CTL properties (triple redundancy of processors with voter)
       <li>
-	CTL<sup>*</sup></li>
-      <li>
-        Venn diagram comparison of the expressibility of LTL, CTL, CTL<sup>+</sup>, CTL<sup>*</sup>, and the &mu;&ndash;calculus
-      <li>
-        Outlook, either of:
+	expressibility difference between LTL, CTL, CTL<sup>+</sup>, and CTL<sup>*</sup>, and the modal &mu;&ndash;calculus
 	<ul>
 	  <li>
-            partial model checking
-            &nbsp;&nbsp; [notes 2024 (<a href="./mc/23-24/notes-lecture-7-partial-model-checking.pdf">pdf</a>)]
-	    <ul>
+	    For every LTL formula &phi; that arises from a CTL formula &Phi; by
+	    deleting the path quantifiers one of the following alternatives holds:
+	    <ul style="list-style-type:lower-roman">
               <li>
-		based on the research paper
-		<em>Partial Model Checking and Partial Model Synthesis
-in LTL Using a Tableau-Based Approach</em>
-                 (<a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol260-fscd2023/LIPIcs.FSCD.2023.23/LIPIcs.FSCD.2023.23.pdf">link</a>) by Serenella Cerrito, Valentin Goranko, Sophie Paillocher at FSCD 2023 on partial model checking
-	    </ul>  
-	  <li>
-	    model &mu;&ndash;calculus
-	    <ul>
+		&phi; is equivalent to &Phi;;
               <li>
-		based on the book chapter
-                <em>The mu-calculus and model-checking</em>
-		(<a href="https://www.labri.fr/perso/igw/Papers/igw-mu.pdf">link</a>)
-		by
-                Julian Bradfield and Igor Wa&#322;ukiewicz
+		there does <u>not</u> exist <u>any</u> LTL formula that is equivalent to &Phi;.
 	    </ul>  
+          <li>
+	    Venn diagram
 	</ul>
+	
+      <li>
+	complexity of model-checking algorithms in comparison:
+	<ul>
+          <li>
+	    model checking of LTL formulas &Phi; in transition systems TS is PSPACE complete, with upper bound O(|TS|.2<sup>|&Phi;|</sup>) ;
+          <li>
+	    model checking of CTL formulas &Phi; in transition systems TS is in PTIME with complexity O(|TS|.|&Phi;|) ;
+	  <li>
+	    model checking of a &mu;-calculus formula &Phi; in transition systems TS is in NP &cap; co-NP.
+	</ul>
+
+      <li>
+	CTL model checking
+	<ul>
+	  <li>
+	    Existential normal form (ENF) of CTL formulas
+          <li> inductive clauses for set satisfiability sets
+	    Sat(true), Sat(p), Sat(&not;&Phi;), Sat(&Phi;<sub>1</sub>&and;&Phi;<sub>2</sub>), Sat(&exist;&#x25EF;&Phi;), Sat(&exist;&Phi;U&Psi;), Sat(&exist;&#x25a1;&Phi;). <!-- &#x25a1; and &#x25c7; -->
+	    <ul>
+              <li>
+		least fixed-point definition of &exist;&Phi;U&Psi;,
+	      <li>
+		greatest fixed point definition of &exist;&#x25a1;&Phi;.
+	    </ul>  
+	</ul> 
     </ul>  
 </ol>  
 
@@ -356,7 +413,7 @@ in LTL Using a Tableau-Based Approach</em>
   <FONT color=darkgreen>gmail</FONT> one dot
   <FONT color=darkgreen>com</FONT>
   /
-  Last modified: Mon 10 Feb 2025 14:58 CST
+  Last modified: Mon 11 Feb 2025 15:29 CST
   /<a href="https://validator.w3.org/check?uri=clegra.github.io%2Fmc.html"><img
       src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
   /
