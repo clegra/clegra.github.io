@@ -1,0 +1,423 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Model Checking</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+    details {
+    font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
+    width: 700px;
+    }
+    details > summary {
+    padding: 2px 6px;
+    width: 15em;
+    background-color: #ddd;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+    }
+    details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 3px 3px 4px black;
+    }
+    details[open] > summary {
+    background-color: #ccf;
+    }
+    li{
+    margin: 1px 0;
+    }
+</style>
+
+    
+  </head>
+
+  <body style="background-color:silver;">
+
+  
+<h1>Model Checking &nbsp;(Core Module 2024&thinsp;&ndash;&thinsp;25)</h1>
+
+
+<h3>Lecturers</h3>
+
+<ul>
+  <li>
+    <a href="https://clegra.github.io">Clemens Grabmayer</a> (5 lectures)</li>
+  <li>
+    <a href="https://cs.gssi.it/emilio.tuosto">Emilio Tuosto</a> (2 lectures)</li>
+</ul>
+
+
+<h3>Room</h3>
+
+<ul>
+  <li>
+    P-2.6, Ex-INPS building of GSSI L'Aquila.
+</ul>
+
+
+
+<h3>Lecture times</h3>
+
+<ol>
+  <li> &nbsp;
+    <font color="firebrick">Friday</font>, January 31, <font color="firebrick">16.00&mdash;18.00</font>
+  <li> &nbsp;
+    <font color="chocolate">Monday</font>, February 3, <font color="chocolate">14.30&mdash;16.30</font>
+  <li> &nbsp;
+   <font color="chocolate"> Wednesday</font>, February 5, <font color="chocolate">14.30&mdash;16.30</font>
+  <li> &nbsp;
+    <font color="firebrick">Thursday</font>, February 6, <font color="firebrick">10.30&mdash;12.30</font> 
+  <li> &nbsp;
+    <font color="chocolate">Friday</font>, February 7, <font color="chocolate">14.30&mdash;16.30</font>
+  <li> &nbsp;
+    <font color="firebrick">Monday</font>, February 10, <font color="firebrick">10.30&mdash;12.30</font>
+  <li> &nbsp;
+    <font color="firebrick">Tuesday</font>, February 11, <font color="firebrick">10.30&mdash;12.30</font>
+</ol>
+
+Different daily slot times have been highlighted by different colors.
+
+
+<h3>Motivation and Preview</h3>
+
+<ul>
+  <li>
+    <em>Introduction to Model Checking (Preview of Core Module)</em>   
+
+      <ul>
+        <li>
+          slides for preview talk, December 2, 2024 (<a href="https://clegra.github.io/lf/mc-preview.pdf">pdf</a>)).
+      </ul>
+  </li>
+</ul>  
+
+
+
+<h3>Book</h3>
+
+<ul>
+  <li>
+    Christel Baier and Joost-Pieter Katoen:
+    <em>Principles of Model Checking</em>,
+    MIT Press, 2008.
+    <ul>
+      <li>
+	An early version of that book is available on the internet:
+	<ul>
+	  <li> <a href="https://is.ifmo.ru/books/_principles_of_model_checking.pdf"><tt>https://is.ifmo.ru/books/_principles_of_model_checking.pdf</tt></a>
+	</ul>
+    </ul>	
+</ul> 
+
+
+
+<h3>Links to Resources</h3>
+
+
+<ul>
+  <li>
+    <em>Laboratory of Formal Methods (2017/2018)</em>
+    by <a href="http://disi.unitn.it/~trentin/">Patrick Trentin</a>
+of the <a href="https://www.unitn.it/en">University of Trento</a>:
+
+    <ul>
+      <li>
+        Webpage Laboratory of Formal Methods (2017/2018)
+
+        <ul>
+          <li>
+            <a href="http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html"><tt>http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html</tt></a>
+        </ul>
+      
+      <li> slides lecture 1:
+          <a href="http://disi.unitn.it/~trentin/teaching/fm2018/lesson01/lesson01.pdf">SPIN: Introduction</a>
+	  
+      <li> slides lecture 4:
+       <a href="http://disi.unitn.it/~trentin/teaching/fm2018/lesson04/lesson04.pdf">SPIN: LTL Model Checking</a>
+
+    </ul>       
+
+  <li>
+    Webinterface 
+    <a href="http://www.lsv.fr/~gastin/ltl2ba/index.php">LTL 2 BA : fast translation from LTL formulae to Büchi automata</a>
+    for tool LTL2BA by Denis Oddoux 
+    using a technique of his and <a href="http://www.lsv.fr/~gastin/">Paul Gastin</a>.
+
+   <li> Further reading:
+	<ul>
+	  <li>
+            partial model checking
+            &nbsp;&nbsp; [notes 2024 (<a href="https://clegra.github.io/mc/23-24/notes-lecture-7-partial-model-checking.pdf">pdf</a>)]
+	    <ul>
+              <li>
+		the research paper
+		<em>Partial Model Checking and Partial Model Synthesis
+in LTL Using a Tableau-Based Approach</em>
+                 (<a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol260-fscd2023/LIPIcs.FSCD.2023.23/LIPIcs.FSCD.2023.23.pdf">link</a>) by Serenella Cerrito, Valentin Goranko, Sophie Paillocher at FSCD 2023 on partial model checking
+	    </ul>  
+
+	  <li>
+	    modal &mu;&ndash;calculus
+	    <ul>
+              <li>
+	        book chapter
+                <em>The mu-calculus and model-checking</em>
+		(<a href="https://www.labri.fr/perso/igw/Papers/igw-mu.pdf">link</a>)
+		by
+                Julian Bradfield and Igor Wa&#322;ukiewicz.
+	    </ul>  
+	</ul>
+</ul>
+
+
+
+<h3>Lectures</h3>
+
+<ol>
+  <li>
+    Introduction 
+      &nbsp;&nbsp; <font color="firebrick">[notes (<a href="https://clegra.github.io/mc/24-25/lecture-1-notes.pdf">pdf</a>)]</font>
+    <ul>
+      <li>
+	motivation for model checking
+      <li>
+	difference with simulation and testing
+      <li>
+	glance at model checking with temporal logics
+    </ul>  
+    
+  <li>
+    Modeling by labeled transition systems
+      &nbsp;&nbsp; <font color="firebrick">[notes (<a href="https://clegra.github.io/mc/24-25/lecture-2-notes.pdf">pdf</a>)]</font>
+    <ul>
+      <li>
+	modeling by Labeled Transition Systems (LTSs)
+	<ul>
+          <li>
+	    exections, traces,
+	  <li>
+	    non-determinism
+	  <li>
+	    examples
+	</ul> 
+	
+    </ul>  
+    
+  <li>
+    Linear-Time Behavior &amp; Properties
+    &nbsp;&nbsp; <font color="firebrick">[notes (<a href="https://clegra.github.io/mc/24-25/lecture-3-notes.pdf">pdf</a>),
+                                  exercises (<a href="https://clegra.github.io/mc/24-25/lecture-3-exercises.pdf">pdf</a>)]</font>
+    <ul>
+      <li>
+	path fragments and paths
+      <li>
+	invariant, safety, and liveness properties
+      <li>
+	every LT-property is the intersection of a safety and a liveness property  
+      <li>
+	fairness properties
+    </ul>  
+
+  <li>
+    Linear Temporal Logic (LTL) 
+      &nbsp;&nbsp; <font color="firebrick">[notes (<a href="https://clegra.github.io/mc/23-24/notes-lectures-4-and-5.pdf">pdf</a>),
+                                  exercises (<a href="https://clegra.github.io/mc/24-25/lecture-4-exercises.pdf">pdf</a>)]</font>
+    <ul>
+      <li>
+	syntax and semantics
+      <li>
+	derived modalities, equivalence of formulas
+      <li>
+	interpretation in a transition system
+      <li>
+	concrete examples
+    </ul>  
+
+  <li>
+    Linear Temporal Logic (LTL)
+    &nbsp;&nbsp; [<font color="firebrick">notes (<a href="https://clegra.github.io/mc/24-25/lecture-5-notes.pdf">pdf</a>),
+                                    exercise </font>(<a href="https://clegra.github.io/mc/24-25/lecture-5-exercise.pdf">pdf</a>)]
+    <ul>
+      <li>
+	Fairness in LTL
+	<ul>
+          <li>
+	    unconditional, weak, and strong fairness conditions expressed by LTL-formulas
+	  <li>
+	    fair satisfiability based on fair paths
+	    <ul>
+	      <li>
+		subjecting an LTL formula &Psi; to a 
+		fairness conditions <font color="chocolate">fair</font>
+                can be expressed as the implicative
+		LTL formula
+		( <font color="chocolate">fair</font> &rArr; &Psi; ). 
+	    </ul>  
+	</ul>  
+      <li>
+	Weak Until modality W
+	<ul>
+	  <li>
+	    permits to express the negation of Until U
+	</ul>  
+      <li>
+	Positive Normal Form of LTL formulas
+      <li>
+	model checking LTL formulas
+        <ul>
+          <li>
+            express properties by (generalized) B&uuml;chi automata
+	    <ul>
+	      <li> examples of translations of LTL formulas ( &#x25CB;<!-- &#x25EF; -->a &nbsp;&nbsp; and &nbsp; a U b ) into generalized B&uuml;chi automata
+	    </ul>
+	</ul>  
+    </ul>
+
+  <li>
+    LTL (continued), Computation Tree Logic (CTL)
+          &nbsp;&nbsp; [<font color="firebrick">notes (<a href="https://clegra.github.io/mc/24-25/lecture-6-notes.pdf">pdf</a></font>)]
+    <ol>
+      <li>
+	LTL model checking
+	<ul>
+          <li>
+            model check transition systems and properties via product automata
+            <ul>
+	      <li> LTL model checking algorithm
+	        <ul>
+                  <li>
+                    algorithm schematically
+	          <li> example from the book (Pedestrian traffic light, property infiitely often green)
+		  <li>
+		    model checking by using Spin: easy examples
+	        </ul>
+            </ul>		
+	  <li>
+	    complexity of this model-checking procedure
+	    <ul>
+	      <li>
+	        PSPACE-complete, with upper bound O(|TS|.2<sup>|&Phi;|</sup>) where |TS| the size of the transition system, and |&Phi;| the size of the LTL formula &Phi; that is checked
+	    </ul>   
+        </ul>
+
+
+      <li>
+	Computation Tree Logic (CTL)
+            <ul>
+              <li>
+	        syntax and semantics
+              <li>
+	        examples
+            </ul>   
+    </ol>	 
+    
+  <li>
+    CTL<sup>+</sup>, CTL<sup>*</sup>, and CTL-model checking
+      &nbsp;&nbsp; 
+            &nbsp;&nbsp; [<font color="red">notes (<a href="https://clegra.github.io/mc/24-25/lecture-7-notes.pdf">pdf</a>)</font>]
+    <ul>
+      <li> Extensions of CTL
+	<ul>
+          <li> CTL<sup>+</sup>
+	    <ul>
+	      <li>
+		is equally expressibe as CTL (proof idea via translation of CTL<sup>+</sup> formulas into CTL formulas
+            </ul>	
+	
+         <li>
+	   CTL<sup>*</sup>
+           <ul>
+	     <li>
+	       is more expressive as CTL
+	     <li>
+	       encompasses LTL by starting with a &forall; path quatifier
+           </ul>
+        </ul>      	   
+      
+      <li>
+	example for finding CTL properties (triple redundancy of processors with voter)
+      <li>
+	expressibility difference between LTL, CTL, CTL<sup>+</sup>, and CTL<sup>*</sup>, and the modal &mu;&ndash;calculus
+	<ul>
+	  <li>
+	    For every LTL formula &phi; that arises from a CTL formula &Phi; by
+	    deleting the path quantifiers one of the following alternatives holds:
+	    <ul style="list-style-type:lower-roman">
+              <li>
+		&phi; is equivalent to &Phi;;
+              <li>
+		there does <u>not</u> exist <u>any</u> LTL formula that is equivalent to &Phi;.
+	    </ul>  
+          <li>
+	    Venn diagram
+	</ul>
+	
+      <li>
+	complexity of model-checking algorithms in comparison:
+	<ul>
+          <li>
+	    model checking of LTL formulas &Phi; in transition systems TS is PSPACE complete, with upper bound O(|TS|.2<sup>|&Phi;|</sup>) ;
+          <li>
+	    model checking of CTL formulas &Phi; in transition systems TS is in PTIME with complexity O(|TS|.|&Phi;|) ;
+	  <li>
+	    model checking of a &mu;-calculus formula &Phi; in transition systems TS is in NP &cap; co-NP.
+	</ul>
+
+      <li>
+	CTL model checking
+	<ul>
+	  <li>
+	    Existential normal form (ENF) of CTL formulas
+          <li> inductive clauses for set satisfiability sets
+	    Sat(true), Sat(p), Sat(&not;&Phi;), Sat(&Phi;<sub>1</sub>&and;&Phi;<sub>2</sub>), Sat(&exist;&#x25CB;<!-- &#x25EF; -->&Phi;), Sat(&exist;&Phi;U&Psi;), Sat(&exist;&#x25a1;&Phi;). <!-- &#x25a1; and &#x25c7; -->
+	    <ul>
+              <li>
+		least fixed-point definition of &exist;&Phi;U&Psi;,
+	      <li>
+		greatest fixed point definition of &exist;&#x25a1;&Phi;.
+	    </ul>  
+	</ul> 
+    </ul>  
+</ol>  
+
+
+
+
+<hr>
+<address>
+  Clemens Grabmayer
+  /
+  www:
+  <a href="https://clegra.github.io">https://clegra.github.io</a>
+  /
+  mailto:
+  <FONT color=darkgreen>c</FONT> one dot
+  <FONT color=darkgreen>a</FONT> one dot
+  <FONT color=darkgreen>grabmayer</FONT> one at
+  <FONT color=darkgreen>gmail</FONT> one dot
+  <FONT color=darkgreen>com</FONT>
+  /
+  Last modified: Mon 2 May 2025 10:05 CST
+  /<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fclegra.github.io%2Fmc%2Fmc.html"><img
+      src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+  /
+
+</address>
+
+<hr>
+
+</body>
+</html>
+
+
