@@ -321,7 +321,7 @@ in LTL Using a Tableau-Based Approach</em>
         </ul>
     </ul>
 
-  <li style="color: firebrick;">
+  <li style="color: mediumblue;">
     Linear Temporal Logic (LTL), continued &nbsp;&nbsp;
     [<font color="red">notes 
     (<a href="https://clegra.github.io/mc/25-26/lecture-5-notes.pdf">pdf</a>)</font>]
@@ -368,14 +368,13 @@ in LTL Using a Tableau-Based Approach</em>
 	</ul>  
     </ul>
 
-  <li style="color: chocolate;">
-    UPCOMING:
+  <li style="color: firebrick;">
     LTL (continued), Computation Tree Logic (CTL)
     &nbsp;&nbsp;
-    [<font color="red">notes CTL (<a href="https://clegra.github.io/mc/25-26/lecture-6-CTL.pdf">pdf</a></font>)]
-    <!--
-    [<font color="black">notes 2024/25 (<a href="https://clegra.github.io/mc/24-25/lecture-6-notes.pdf">pdf</a></font>)]
-     -->
+    <!-- [<font color="red">notes CTL (<a href="https://clegra.github.io/mc/25-26/lecture-6-CTL.pdf">pdf</a></font>)] -->
+    
+    [<font color="black">preliminary notes (<a href="https://clegra.github.io/mc/24-25/lecture-6-notes.pdf">pdf</a></font>)]
+     
     <ol>
       <li>
 	LTL model checking
@@ -400,17 +399,39 @@ in LTL Using a Tableau-Based Approach</em>
 	    </ul>   
         </ul>
 
-
       <li>
 	Computation Tree Logic (CTL)
+	  &nbsp;&nbsp;
+          [<font color="red">notes CTL (<a href="https://clegra.github.io/mc/25-26/lecture-6-CTL.pdf">pdf</a></font>)]
             <ul>
               <li>
 	        syntax and semantics
               <li>
 	        examples
+
+      <li> Extensions of CTL
+	<ul>
+          <li> CTL<sup>+</sup>
+	    <ul>
+	      <li>
+		is equally expressibe as CTL (proof idea via translation of CTL<sup>+</sup> formulas into CTL formulas
+            </ul>	
+	
+         <li>
+	   CTL<sup>*</sup>
+           <ul>
+	     <li>
+	       is more expressive as CTL
+	     <li>
+	       encompasses LTL by starting with a &forall; path quatifier
+           </ul>
+        </ul>
+		
             </ul>   
     </ol>	 
-    
+
+
+<!--    
   <li>
     CTL<sup>+</sup>, CTL<sup>*</sup>, and CTL-model checking
       &nbsp;&nbsp; 
@@ -469,7 +490,10 @@ in LTL Using a Tableau-Based Approach</em>
 	  <li>
 	    Existential normal form (ENF) of CTL formulas
           <li> inductive clauses for set satisfiability sets
-	    Sat(true), Sat(p), Sat(&not;&Phi;), Sat(&Phi;<sub>1</sub>&and;&Phi;<sub>2</sub>), Sat(&exist;&#x25CB;<!-- &#x25EF; -->&Phi;), Sat(&exist;&Phi;U&Psi;), Sat(&exist;&#x25a1;&Phi;). <!-- &#x25a1; and &#x25c7; -->
+	    Sat(true), Sat(p), Sat(&not;&Phi;), Sat(&Phi;<sub>1</sub>&and;&Phi;<sub>2</sub>), Sat(&exist;&#x25CB; &#x25EF; &Phi;), Sat(&exist;&Phi;U&Psi;), Sat(&exist;&#x25a1;&Phi;).
+
+
+	    &#x25a1; and &#x25c7;
 	    <ul>
               <li>
 		least fixed-point definition of &exist;&Phi;U&Psi;,
@@ -477,7 +501,8 @@ in LTL Using a Tableau-Based Approach</em>
 		greatest fixed point definition of &exist;&#x25a1;&Phi;.
 	    </ul>  
 	</ul> 
-    </ul>  
+    </ul>
+-->    
 </ol>  
 
 
