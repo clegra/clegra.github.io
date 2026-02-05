@@ -59,21 +59,6 @@
 </ul>
 
 
-<!--
-
-<h3>Room</h3>
-
-<ul>
-  <li>
-    <font color="chocolate">Conference Room, floor &mdash;1, Zenith</font>, GSSI.
-  <li>
-    <font color="red">Exception (once)</font>:
-      <font color="firebrick">P-2.6, Zenith</font>, GSSI on <font color="firebrick">February 3</font>.
-</ul>
-
--->
-
-
 <h3>Lectures</h3>
 
 <ol>
@@ -175,31 +160,6 @@
       <li>
 	Maude model checker (<a href="https://maude.cs.illinois.edu/tools/lmc">link</a>).
     </ul> 
-  
-  <!--
-  <li>
-    <em>Laboratory of Formal Methods (2017/2018)</em>
-    by <a href="http://disi.unitn.it/~trentin/">Patrick Trentin</a>
-of the <a href="https://www.unitn.it/en">University of Trento</a>:
-
-    <ul>
-      <li>
-        Webpage Laboratory of Formal Methods (2017/2018)
-
-        <ul>
-          <li>
-            <a href="http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html"><tt>http://disi.unitn.it/~trentin/teaching/fm2018/fm2018.html</tt></a>
-        </ul>
-      
-      <li> slides lecture 1:
-          <a href="http://disi.unitn.it/~trentin/teaching/fm2018/lesson01/lesson01.pdf">SPIN: Introduction</a>
-	  
-      <li> slides lecture 4:
-       <a href="http://disi.unitn.it/~trentin/teaching/fm2018/lesson04/lesson04.pdf">SPIN: LTL Model Checking</a>
-
-    </ul>       
-
-  -->
 
   <li>
     Webinterface 
@@ -307,6 +267,7 @@ in LTL Using a Tableau-Based Approach</em>
 	      <font color="red">[note (<a href="https://clegra.github.io/mc/25-26/lecture-4-exercises-2.pdf">pdf</a>)]</font>
 	    
 	</ul>
+
       <li> LTL 
       &nbsp;&nbsp; <font color="red">[notes of Lecture 5 (<a href="https://clegra.github.io/mc/25-26/lecture-4-notes.pdf">pdf</a>) of Lecture 3]</font>
         <ul>
@@ -369,7 +330,7 @@ in LTL Using a Tableau-Based Approach</em>
 	</ul>  
     </ul>
 
-  <li style="color: firebrick;">
+  <li style="color: mediumblue;">
     LTL (continued), Computation Tree Logic (CTL)
      
     <ol>
@@ -391,20 +352,6 @@ in LTL Using a Tableau-Based Approach</em>
                   <li>
                     algorithm schematically
 	          <li> example from the book (Pedestrian traffic light, property infiitely often green)
-		  <!--  
-		  <li>
-		    model checking by using Spin: easy examples
-                    -->
-	        </ul>
-            </ul>
-	  <!--  
-	  <li>
-	    complexity of this model-checking procedure
-	    <ul>
-	      <li>
-	        PSPACE-complete, with upper bound O(|TS|.2<sup>|&Phi;|</sup>) where |TS| the size of the transition system, and |&Phi;| the size of the LTL formula &Phi; that is checked
-	    </ul>   
-            -->
         </ul>
 
       <li>
@@ -438,49 +385,37 @@ in LTL Using a Tableau-Based Approach</em>
             </ul>   
     </ol>	 
 
-
-<!--    
-  <li>
-    CTL<sup>+</sup>, CTL<sup>*</sup>, and CTL-model checking
-      &nbsp;&nbsp; 
-            &nbsp;&nbsp; [<font color="black">notes 2024/25 (<a href="https://clegra.github.io/mc/24-25/lecture-7-notes.pdf">pdf</a>)</font>]
+  <li style="color: firebrick;">
+    LTL model checking with Maude, and 
+            &nbsp;&nbsp; [<font color="red">notes Lecture 7 (<a href="https://clegra.github.io/mc/25-26/lecture-7-notes.pdf">pdf</a>)</font>]
+    
     <ul>
-      <li> Extensions of CTL
-	<ul>
-          <li> CTL<sup>+</sup>
-	    <ul>
-	      <li>
-		is equally expressibe as CTL (proof idea via translation of CTL<sup>+</sup> formulas into CTL formulas
-            </ul>	
-	
-         <li>
-	   CTL<sup>*</sup>
-           <ul>
-	     <li>
-	       is more expressive as CTL
-	     <li>
-	       encompasses LTL by starting with a &forall; path quatifier
-           </ul>
-        </ul>      	   
-      
+      <li>    
+        Webinterface 
+        <a href="http://www.lsv.fr/~gastin/ltl2ba/index.php">LTL 2 BA : fast translation from LTL formulae to Büchi automata</a>
+        for tool LTL2BA by Denis Oddoux 
+        using a technique of his and <a href="http://www.lsv.fr/~gastin/">Paul Gastin</a>.
+
       <li>
-	example for finding CTL properties (triple redundancy of processors with voter)
+        LTL model checking with Maude: the <em>River Crossing Problem</em>.
+
       <li>
-	expressibility difference between LTL, CTL, CTL<sup>+</sup>, and CTL<sup>*</sup>, and the modal &mu;&ndash;calculus
+	CTL model checking
 	<ul>
 	  <li>
-	    For every LTL formula &phi; that arises from a CTL formula &Phi; by
-	    deleting the path quantifiers one of the following alternatives holds:
-	    <ul style="list-style-type:lower-roman">
+	    Existential normal form (ENF) of CTL formulas
+          <li> inductive clauses for set satisfiability sets
+	    Sat(true), Sat(p), Sat(&not;&Phi;), Sat(&Phi;<sub>1</sub>&and;&Phi;<sub>2</sub>), Sat(&exist;&#x25CB; &#x25EF; &Phi;), Sat(&exist;&Phi;U&Psi;), Sat(&exist;&#x25a1;&Phi;).
+	    <!-- &#x25a1; and &#x25c7; -->
+	    
+	    <ul>
               <li>
-		&phi; is equivalent to &Phi;;
-              <li>
-		there does <u>not</u> exist <u>any</u> LTL formula that is equivalent to &Phi;.
+		least fixed-point definition of &exist;&Phi;U&Psi;,
+	      <li>
+		greatest fixed point definition of &exist;&#x25a1;&Phi;.
 	    </ul>  
-          <li>
-	    Venn diagram
-	</ul>
-	
+	</ul> 
+      
       <li>
 	complexity of model-checking algorithms in comparison:
 	<ul>
@@ -491,26 +426,7 @@ in LTL Using a Tableau-Based Approach</em>
 	  <li>
 	    model checking of a &mu;-calculus formula &Phi; in transition systems TS is in NP &cap; co-NP.
 	</ul>
-
-      <li>
-	CTL model checking
-	<ul>
-	  <li>
-	    Existential normal form (ENF) of CTL formulas
-          <li> inductive clauses for set satisfiability sets
-	    Sat(true), Sat(p), Sat(&not;&Phi;), Sat(&Phi;<sub>1</sub>&and;&Phi;<sub>2</sub>), Sat(&exist;&#x25CB; &#x25EF; &Phi;), Sat(&exist;&Phi;U&Psi;), Sat(&exist;&#x25a1;&Phi;).
-
-
-	    &#x25a1; and &#x25c7;
-	    <ul>
-              <li>
-		least fixed-point definition of &exist;&Phi;U&Psi;,
-	      <li>
-		greatest fixed point definition of &exist;&#x25a1;&Phi;.
-	    </ul>  
-	</ul> 
-    </ul>
--->    
+    </ul>	
 </ol>  
 
 
@@ -530,7 +446,7 @@ in LTL Using a Tableau-Based Approach</em>
   <FONT color=darkgreen>gmail</FONT> one dot
   <FONT color=darkgreen>com</FONT>
   /
-  Last modified: Tue 3 Feb 2026 20:48 CST
+  Last modified: Thu 5 Feb 2026 18:45 CST
   /<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fclegra.github.io%2Fmc%2Fmc.html"><img
       src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
   /
