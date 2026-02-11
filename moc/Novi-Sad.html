@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Models of Computation</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+    details {
+    font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
+    width: 700px;
+    }
+    details > summary {
+    padding: 2px 6px;
+    width: 15em;
+    background-color: #ddd;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+    }
+    details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 3px 3px 4px black;
+    }
+    details[open] > summary {
+    background-color: #ccf;
+    }
+    li{
+    margin: 1px 0;
+    }
+</style>
+
+    
+  </head>
+
+  <body style="background-color:silver;">
+
+  
+<h1>Models of Computation &nbsp;(Advanced Course 2024&thinsp;&ndash;&thinsp;25)</h1>
+
+
+
+<h3>Lecturer</h3>
+
+<ul>
+  <li>
+    <a href="https://clegra.github.io">Clemens Grabmayer</a></li>
+</ul>
+
+
+<h3>Room</h3>
+
+<ul>
+  <li>
+    To be determined. 
+</ul>
+
+
+
+<h3>Lecture times</h3>
+
+To be determined.
+
+<!--
+<ol>
+  <li> &nbsp;
+    <font color="black">Monday</font>, July 7, <font color="black">10.30&mdash;12.30</font>
+  <li> &nbsp;
+    <font color="black">Tuesday</font>, July 8, <font color="black">10.30&mdash;12.30</font>
+  <li> &nbsp;
+   <font color="black"> Wednesday</font>, July 9, <font color="black">10.30&mdash;12.30</font>
+  <li> &nbsp;
+    <font color="black">Thursday</font>, July 10, <font color="black">10.30&mdash;12.30</font> 
+  <li> &nbsp;
+    <font color="black">Friday</font>, July 11, <font color="black">14.30&mdash;16.30</font>
+</ol>
+-->
+
+
+<h3>Overview at a glance</h3>
+
+<!--
+<img src="./24-25/at-a-glance.jpg"
+     alt="Overview Table of the Lecture Models of Computation at a Glance"
+     width=635 height=371>
+-->
+     <!-- 1915 x 1112 -->
+
+
+
+<h3>Course Aims</h3>
+
+
+  The course aims at familiarizing attendees with basic concepts of computability theory and with several and diverse models of computation. Following the historical development, three classical models will be presented first:
+  <ul>
+    <li>
+      Turing machines,</li>
+    <li>
+      recursive functions,</li>
+    <li>
+      Lambda Calculus.</li>
+  </ul>
+  Subsequently, more recent models in computer science and other fields like science and biology will be mentioned.
+
+
+The focus will be on understanding underlying intuitions rather than on exhaustively formal presentations. Specific attention will be directed to:
+  <ul>
+    <li>
+      the comparison of the computational power of different models by finding, whenever possible, simulations between them, modulo reasonable encodings.</li>
+  </ul>
+By recognizing that some quite disparate models are computationally equally powerful, we will survey some of the ample empirical evidence that computability is a fundamental concept, the Church-Turing Thesis: every informally computable function is Turing-computable (and equivalently, is definable in Lambda Calculus), modulo reasonable encodings.
+  
+ 
+
+<h3>Lectures</h3>
+
+<ol>
+  <li>
+    Introduction and Overview
+    <!--
+    (<a href="https://clegra.github.io/moc/24-25/lecture-1-handout.pdf">slides (handout version)</a>,
+    <a href="https://clegra.github.io/moc/24-25/lecture-1.pdf">slides (with overlays)</a>) -->
+    
+    <ul>
+      <li>
+	material GSSI-course, July 2025: 
+        [<a href="https://clegra.github.io/moc/24-25/lecture-1-handout.pdf">slides (handout version)</a>,
+    <a href="https://clegra.github.io/moc/24-25/lecture-1.pdf">slides (with overlays)</a>]
+    </ul>	
+    
+    
+  <li>
+    Post and Turing machines, Turings analysis of computability
+    <!-- (<a href="https://clegra.github.io/moc/24-25/lecture-2-handout.pdf">slides (handout version)</a>,
+    <a href="https://clegra.github.io/moc/24-25/lecture-2.pdf">slides (with overlays)</a>) -->
+    
+    <ul>
+      <li>
+	material GSSI-course, July 2025: 
+	[<a href="https://clegra.github.io/moc/24-25/lecture-2-handout.pdf">slides (handout version)</a>,
+    <a href="https://clegra.github.io/moc/24-25/lecture-2.pdf">slides (with overlays)</a>]
+    </ul>
+    
+  <li>
+    Partial-Recursive Functions
+    <!--
+    (<a href="https://clegra.github.io/moc/24-25/lecture-3-handout.pdf">slides (handout version)</a>,
+    <a href="https://clegra.github.io/moc/24-25/lecture-3.pdf">slides (with overlays)</a>)
+      -->
+    
+    <ul>
+      <li>
+	material GSSI-course, July 2025: 
+        [<a href="https://clegra.github.io/moc/24-25/lecture-3-handout.pdf">slides (handout version)</a>,
+    <a href="https://clegra.github.io/moc/24-25/lecture-3.pdf">slides (with overlays)</a>]
+    </ul>    
+    
+  <li>
+    Lambda Calculus
+    <!--
+    (<a href="https://clegra.github.io/moc/24-25/lecture-4-handout.pdf">slides (handout version)</a>,
+     <a href="https://clegra.github.io/moc/24-25/lecture-4.pdf">slides (with overlays)</a>,
+     <a href="https://clegra.github.io/moc/24-25/lambda-definability.pdf">handout from-recursive-to-&lambda;-definable</a>)
+      -->
+ 
+    <ul>
+      <li>
+	material GSSI-course, July 2025: 
+	[<a href="https://clegra.github.io/moc/24-25/lecture-4-handout.pdf">slides (handout version)</a>,
+     <a href="https://clegra.github.io/moc/24-25/lecture-4.pdf">slides (with overlays)</a>,
+     <a href="https://clegra.github.io/moc/24-25/lambda-definability.pdf">handout from-recursive-to-&lambda;-definable</a>]
+    </ul>
+    
+    
+  <li>
+    Three More Models
+    <!--
+    (<a href="https://clegra.github.io/moc/24-25/lecture-5-handout.pdf">slides (handout version)</a>,
+     <a href="https://clegra.github.io/moc/24-25/lecture-5.pdf">slides (with overlays)</a>,
+     <a href="https://clegra.github.io/moc/24-25/reductions-between-mocs.pdf">handout comparing computational power</a>)
+     -->
+
+    <ul>
+      <li>
+	material GSSI-course, July 2025: 
+        [<a href="https://clegra.github.io/moc/24-25/lecture-5-handout.pdf">slides (handout version)</a>,
+     <a href="https://clegra.github.io/moc/24-25/lecture-5.pdf">slides (with overlays)</a>,
+     <a href="https://clegra.github.io/moc/24-25/reductions-between-mocs.pdf">handout comparing computational power</a>]
+    </ul>
+    
+     
+</ol>  
+
+
+
+<h3>Book</h3>
+
+<ul>
+  <li>
+  Maribel Fern&aacute;ndez:
+  <em>Models of Computation
+    (An Introduction to Computability Theory)</em>,
+    Springer-Verlag London, 2009.
+</ul> 
+
+
+
+
+<h3>Links to Further Resources</h3>
+
+
+<ul>
+  <li>
+    B&ouml;hm's full precision calculator and Recursive Real Analysis (RRA):
+    <ul>
+      <li>
+	Popular science article by Chad Nauseam (<a href="https://chadnauseam.com/coding/random/calculator-app">link</a>)
+    </ul>  
+  
+  <li>
+    Post machines, and Post's computability `working hypothesis':
+    <ul>
+      <li>
+	Emil Leon Post: "Finite Combinatory Processes&nbsp;&mdash;&nbsp;Formulation 1"
+        (<a href="https://www.wolframscience.com/prizes/tm23/images/Post.pdf">pdf via wolframscience</a>),
+        <em>The Journal of Symbolic Logic</em>, Vol. 1, No. 3. (Sep., 1936), pp. 103-105.
+    </ul>
+
+    
+  <li>
+    Turing, and Turing machines:
+    <ul>
+      <li>
+	Alan M. Turing: "On Computable Numbers, with an Application to the Entscheidungsproblem" 
+        (<a href="http://www.wolframscience.com/prizes/tm23/images/Turing.pdf">pdf via wolframscience</a>),
+        <em>Proceedings of the London Mathematical Society</em>, 1936.
+	
+        <ul>
+          <li> General interest (recent report):
+            <em>Wartime codebreaker Alan Turing’s scientific papers sell for £465,000 at auction</em> (<a href="https://www.theguardian.com/science/2025/jun/17/wartime-codebreaker-alan-turings-scientific-papers-sell-for-465000-at-auction?CMP=bsky_gu">Guardian article</a>, Tue 17 Jun 2025)
+       </ul>
+
+      <li>
+	Mike Davey's Turing Machine ``<em>embodying the classic look and feel of a Turing machine</em>''
+	(<a href="https://www.youtube.com/watch?v=E3keLeMwfHY">link youtube</a>)
+
+      <li>
+	The LEGO Turing Machine
+	(<a href="https://www.youtube.com/watch?v=cYw2ewoO6c4">link youtube</a>)
+      	
+    </ul>
+    
+  <li>
+    Church's Thesis and effective calculability:
+    <ul>
+      <li>
+        A. Church: "An Unsolvable Problem of Elementary Number Theory"
+	 (<a href="https://www.jstor.org/stable/2371045?seq=1">read pdf at JSTOR</a>)
+    </ul>
+	
+  <li>
+    From partial recursive functions to &lambda;-definable functions:
+    <ul>
+      <li> Handout (<a href="https://clegra.github.io/moc/24-25/lambda-definability.pdf">pdf</a>).
+    </ul>
+
+  <li>
+    Comparing computational power of models of computation
+    <ul>
+      <li>
+	Handout (<a href="https://clegra.github.io/moc/24-25/reductions-between-mocs.pdf">pdf</a>).
+	
+      <li>
+	Udi Boker, and Nachum Dershowitz:
+	"Comparing Computational Power",
+	Logic Journal of the IGPL
+	(<a href="https://arxiv.org/pdf/cs.LO/0510069">pdf report-version via arXiv </a>).
+	
+      <li>
+	J&ouml;rg Endrullis, Clemens Grabmayer, and Dimitri Hendriks:
+	"Regularity-Preserving but not Reflecting Encodings",
+	Proceedings of LICS 2015
+	(<a href="https://clegra.github.io/lf/lics-2015.pdf">pdf</a>,
+	 <a href="http://arxiv.org/pdf/1501.04835">pdf report via arXiv</a>).
+    </ul>
+
+  <li>
+    Post's Correspondence Problem: 
+    <ul>
+      <li>
+	Emil Leon Post:
+	"A Variant of a Recursively Unsolvable Problem",
+	Bulletin of the American Mathematical Society, 1946
+        (<a href="https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society/volume-52/issue-4/A-variant-of-a-recursively-unsolvable-problem/bams/1183507843.pdf">pdf via projectEuclid</a>).
+    </ul>  
+
+  <li>
+    Interaction Nets:
+    <ul>
+      <li>
+	Yves Lafont: "Interaction Nets", <em>Proceedings of POPL'90</em>, 1990
+	(<a href="https://dl.acm.org/doi/pdf/10.1145/96709.96718">pdf via ACM</a>).
+      <li>
+	Lambdascope:
+	<ul>
+          <li>
+            Vincent van Ostrom,
+	    Kees-Jan van de Looij,
+	    Marijn Zwitserlood: "Lambdascope"
+	    (<a href="http://www.javakade.nl/research/pdf/lambdascope.pdf">pdf via van Oostrom's publication page</a>),
+	  <li>
+	    Jan Rochel: "graph-rewriting-lambdascope",
+	      Lambdascope animation tool, available (<a href="https://hackage.haskell.org/package/graph-rewriting-lambdascope">link</a>) on Haskell Hackage. 
+	</ul>  
+    </ul>	
+
+  <li>
+    Fractran:
+    <ul>
+      <li>
+	John Horton Conway:
+	<ul>
+	  <li> "FRACTRAN: A Simple Universal Programming Language for Arithmetic"
+	    (<a href="https://link.springer.com/chapter/10.1007/978-1-4612-4808-8_2">page for download first 2 pages of article</a>).
+	    
+	  <li> "Fractran: A Ridiculous Logical Language" (<a href="https://www.uctv.tv/shows/Fractran-A-Ridiculous-Logical-Language-with-John-Conway-23320">link talk video</a>).
+	</ul>
+    </ul>  
+
+</ul>
+
+
+
+<hr>
+<address>
+  Clemens Grabmayer
+  /
+  www:
+  <a href="https://clegra.github.io">https://clegra.github.io</a>
+  /
+  mailto:
+  <FONT color=darkgreen>c</FONT> one dot
+  <FONT color=darkgreen>a</FONT> one dot
+  <FONT color=darkgreen>grabmayer</FONT> one at
+  <FONT color=darkgreen>gmail</FONT> one dot
+  <FONT color=darkgreen>com</FONT>
+  /
+  Last modified: Wed 11 Feb 2026 12:12 CEST
+  /<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fclegra.github.io%2Fmoc%2Fmoc.html"><img
+      src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+  /
+
+</address>
+
+<hr>
+
+</body>
+</html>
+
+
