@@ -7,7 +7,14 @@
     img {
         max-width: 100%;
         height: auto;
-        width: auto\9; /* ie8 */
+        .selector {
+        width: auto; /* Standard */
+        width: auto\9; /* IE 8 and below */
+          }
+    }
+    selector {
+      width: auto; /* Standard */
+      width: auto\9; /* IE 8 and below */
     }
     details {
     font:
