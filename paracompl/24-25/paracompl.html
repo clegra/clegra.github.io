@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Parameterized Complexity</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <style type="text/css">
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* ie8 */
+    }
+    details {
+    font:
+    16px "Open Sans",
+    Calibri,
+    sans-serif;
+    width: 700px;
+    }
+    details > summary {
+    padding: 2px 6px;
+    width: 15em;
+    background-color: #ddd;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+    }
+    details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 3px 3px 4px black;
+    }
+    details[open] > summary {
+    background-color: #ccf;
+    }
+    li{
+    margin: 1px 0;
+    }
+</style>
+
+    
+  </head>
+
+  <body style="background-color:silver;">
+
+  
+<h1>Parameterized Complexity &nbsp;(Advanced Course 2024&thinsp;&ndash;&thinsp;25)</h1>
+
+
+<h3>Lecturer</h3>
+
+<ul>
+  <li>
+    <a href="https://clegra.github.io">Clemens Grabmayer</a> </li>
+</ul>
+
+
+<h3>Room</h3>
+
+<ul>
+  <li>
+    Monday&mdash;Thursday (mornings): GSSI Library, Ex-ISEF building,
+  <li>
+    Friday (afternoon): Room A, Ex-ISEF building.
+</ul>
+
+
+
+<h3>Lecture times</h3>
+
+<ol>
+  <li> &nbsp;
+    <font color="black">Monday</font>, July 14, <font color="black">10.30&mdash;12.30</font>
+  <li> &nbsp;
+    <font color="black">Tuesday</font>, July 15, <font color="black">10.30&mdash;12.30</font>
+  <li> &nbsp;
+   <font color="black"> Wednesday</font>, July 16, <font color="black">10.30&mdash;12.30</font>
+  <li> &nbsp;
+    <font color="black">Thursday</font>, July 17, <font color="black">10.30&mdash;12.30</font>
+  <li> &nbsp;
+    <font color="black">Friday</font>, July 18, <font color="black">14.30&mdash;16.30</font>
+</ol>
+
+
+
+<h3>Overview at a glance</h3>
+
+<img src="https://clegra.github.io/paracompl/24-25/course-2025-at-a-glance.jpg"
+     alt="Overview Advanced Course Parameterized Complexity at a Glance"
+     width=761 height=301>
+     <!-- 2284x903 -->
+
+
+<h3>Syllabus</h3>
+
+<p>
+  Parameterized complexity theory is concerned with a refined analysis of computational problems. The computational effort needed to decide a problem is described by (1+k)-ary functions that depend not only on the size of problem instances, but also on k &ge; 1 parameters that quantify relevant structural properties of instances. Many intractable problems can be classified to be <em>Fixed-Parameter Tractable (FPT)</em> for appropriate choices of parameter(s). Such FPT problems are frequently tractable in practice for instances with small parameters.
+</p>
+  
+
+The course is an interleaving of two parts, which focus on algorithmic (A) aspects, and on Formal Methods (FM) viewpoints:
+  <ul>
+    <li>
+      The <em>algorithmic part (A)</em> covers methods for designing FPT-algorithms (kernelization, and dynamic programming with graph-width parameters).</li>
+    <li>
+      The <em>formal methods part (FM)</em> introduces algorithmic meta-theorems for obtaining FPT-results such as Courcelle’s theorem, and classifications of <em>FPT-intractability</em> by means of concepts from mathematical logic (the W/A-hierarchies of complexity classes based on model checking problems).</li>
+  </ul>    
+
+
+
+<h3>Books</h3>
+
+<ul>
+  <li>
+    <em>Parameterized Algorithms</em>
+    (<a href="https://www.mimuw.edu.pl/~malcin/book/parameterized-algorithms.pdf">link pdf</a>), Springer 2015,
+    by:
+    Marek Cygan, Fedor F. Fomin, Lukasz Kowalik, Daniel Lokshtanov, Daniel Marx, Marcin Pilipczuk, Michal Pilipczuk, and Saket Saurabh.
+
+  <li>
+    <em>Parameterized Complexity Theory</em>
+      by: J&ouml;rg Flum and Martin Grohe, Springer, 2006.
+</ul> 
+
+
+<h3>Lectures</h3>
+
+<ol>
+  <li>
+    Introduction and Basic FPT-Results
+    (<a href="https://clegra.github.io/paracompl/24-25/lecture-1-handout.pdf">slides handout</a>,
+    <a href="https://clegra.github.io/paracompl/24-25/lecture-1.pdf">slides</a>,
+    <a href="https://drive.google.com/file/d/16r6fazGeMptnr1XL97vrl-gLXxf5GW2w/view?usp=drive_link">worksheet</a>).
+    
+  <li>
+    Graph width notions, dynamical programming
+    (<a href="https://clegra.github.io/paracompl/24-25/lecture-2-handout.pdf">slides handout</a>,
+    <a href="https://clegra.github.io/paracompl/24-25/lecture-2.pdf">slides</a>,
+    <a href="https://drive.google.com/file/d/1LW5wfOEYH7Efl3m19RxbIq8XqNcuQ9AL/view?usp=drive_link">worksheet</a>)
+    
+  <li>
+    Algorithmic Meta-Theorems
+    (<a href="https://clegra.github.io/paracompl/24-25/lecture-3-handout.pdf">slides handout</a>,
+     <a href="https://clegra.github.io/paracompl/24-25/lecture-3.pdf">slides</a>,
+    <a href="https://drive.google.com/file/d/17p0vz-1KdRNzHHbIm7fUBamEjGGBNg09/view?usp=drive_link">worksheet</a>)
+    
+  <li>
+    Algorithmic Meta-Theorems (continued),
+    Fixed-Parameter Intractability (started
+    (<a href="https://clegra.github.io/paracompl/24-25/lecture-4-handout.pdf">slides handout</a>,
+    <a href="https://clegra.github.io/paracompl/24-25/lecture-4.pdf">slides</a>)
+    (<a href="https://drive.google.com/file/d/1685ta0O-GnPQeuvjZy3VRJBhw9Ip5Ad3/view?usp=drive_link">all-together worksheet</a>)
+
+  <li>
+    Fixed-Parameter Intractability 
+    (<a href="https://clegra.github.io/paracompl/24-25/lecture-4-handout.pdf">slides handout</a>,
+    <a href="https://clegra.github.io/paracompl/24-25/lecture-4.pdf">slides</a>), question hour, discussion
+    (<font color=red>updated</font> <a href="https://drive.google.com/file/d/1clC-4OEqwM6Eu0jRTRb_di4iGfpHD1ZI/view?usp=drive_link">worksheet</a>)
+</ol>  
+
+
+
+
+<hr>
+<address>
+  Clemens Grabmayer
+  /
+  www:
+  <a href="https://clegra.github.io">https://clegra.github.io</a>
+  /
+  mailto:
+  <FONT color=darkgreen>c</FONT> one dot
+  <FONT color=darkgreen>a</FONT> one dot
+  <FONT color=darkgreen>grabmayer</FONT> one at
+  <FONT color=darkgreen>gmail</FONT> one dot
+  <FONT color=darkgreen>com</FONT>
+  /
+  Last modified: Sun 20 Jul 2025 18:20 CEST
+  /<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fclegra.github.io%2Fparacompl%2Fparacompl.html"><img
+      src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+  /
+
+</address>
+
+<hr>
+
+</body>
+</html>
+
+
