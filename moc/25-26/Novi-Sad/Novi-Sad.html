@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Models of Computation</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .selector {
+            width: auto; /* Standard */
+            width: auto\9; /* IE 8 and below */
+        }
+        details {
+            font: 16px "Open Sans", Calibri, sans-serif; /* Corrected */
+            width: 700px;
+        }
+        details > summary {
+            padding: 2px 6px;
+            width: 15em;
+            background-color: #ddd;
+            border: none;
+            box-shadow: 3px 3px 4px black;
+            cursor: pointer;
+        }
+        details > p {
+            border-radius: 0 0 10px 10px;
+            background-color: #ddd;
+            padding: 2px 6px;
+            margin: 0;
+            box-shadow: 3px 3px 4px black;
+        }
+        details[open] > summary {
+            background-color: #ccf;
+        }
+        li {
+            margin: 1px 0;
+        }
+    </style>
+</head>
+
+
+  <body style="background-color:silver;">
+
+  
+<h1>Models of Computation</h1>
+
+
+<h2>Course at the University of Novi Sad, March 3&mdash;12, 2026</h2>
+
+
+<h3>Lecturer</h3>
+
+<ul>
+  <li>
+    <a href="https://clegra.github.io">Clemens Grabmayer</a>
+
+    <p>
+    <img style="vertical-align:bottom"
+         src="https://clegra.github.io/moc/25-26/Novi-Sad/GSSI-logo.jpg"
+         alt="Logo of the Gran Sasso Science Institute"
+         width="360" height="140">  <!-- 3600 x 1400 -->
+  </li>
+</ul>
+
+
+<h3>Visit credits</h3>
+
+<ul>
+  <li>
+    Heartfelt thanks to our hosts:
+    <ul>
+      <li>
+	Jovanka Pantovi&cacute; (Chair for Mathematics, Department of fundamental disciplines, University of Novi Sad)
+      <li>
+	Silvia Ghilezan (Head of Mathematics Department, Mathematical Institute SASA, Novi Sad)
+      <li>
+	Ivan Proki&cacute; (University of Novi Sad)
+    </ul>  
+  
+  <li>
+    Our visit is financed by the DESK (Developing Shared Knowledge), a European Union project, under the auspices of the Italian Ministery for Universities and Research.
+    <p>
+    <img style="vertical-align:bottom"
+         src="https://clegra.github.io/moc/25-26/Novi-Sad/DESK.jpg"
+         alt="Visit finance credits"
+         width="710" height="86">  <!-- 2829 x 353 -->
+</ul>  
+
+
+<h3>Framework</h3>
+
+This lecture took place in the framework of
+the <a href="https://imft.ftn.uns.ac.rs/math/cms/Seminar/GeneralSeminar">General Seminar</a>
+of the Center for Mathematics and Statistics
+of the <a href="https://ftn.uns.ac.rs/engfaculty-of-technical-sciences-eng/">Faculty of Technical Sciences</a>
+of the
+<a href="https://www.uns.ac.rs/index.php/en/">University of Novi Sad</a>.
+
+<ul>
+  <li>
+    Course page (<a href="https://imft.ftn.uns.ac.rs/math/cms/Seminar/ModelsOfComputation">link</a>) at the Center for Mathematics and Statistics at the Faculty of Technical Sciences at the University of Novi Sad.
+</ul>  
+
+
+
+<h3>Room</h3>
+
+<ul>
+  <li>
+    <span style="color:firebrick">Room NTP 317</span> in the new building of the Faculty of Fundamental Disciplines, University of Novi Sad.
+</ul>
+
+
+
+<h3>Lecture times</h3>
+
+<ul>
+  <li>
+    <span style="color:firebrick">17.00&mdash;19.00 daily (except Saturday and Sunday)  Tuesday, March 3 &mdash; Thursday, March 12, 2026</span>.
+    <br>
+    <span style="color:firebrick;">Please note:</span>
+    this slot will be shared with the course:
+    <ul>
+      <li>
+	 Emilio Tuosto (with guest lecture by Dragi&zcaron;a Zuni&cacute;):
+        <em style="color:darkcyan">Formal methods for Communication Protocols (in robotics, e-finance, etc.)</em>
+	(<a href="https://emwww.github.io/home/teaching/formal_methods_for_communication_protocols/">link</a>).
+    </ul>   
+</ul>    
+ 
+
+<h3>Overview at a glance</h3>
+
+
+<img src="https://clegra.github.io/moc/25-26/Novi-Sad/overview-at-a-glance.jpg"
+     alt="Overview Table of the Lecture Models of Computation at a Glance"
+     width=766 height=276>
+     <!-- 2298 x 835 -->
+
+
+
+<h3>Course Aims</h3>
+
+
+  The course aims at familiarizing attendees with basic concepts of computability theory and with several and diverse models of computation. Following the historical development, three classical models will be presented first:
+  <ul>
+    <li>
+      Turing machines,</li>
+    <li>
+      recursive functions,</li>
+    <li>
+      Lambda Calculus.</li>
+  </ul>
+  Subsequently, more recent models in computer science and other fields like science and biology will be mentioned.
+
+
+The focus will be on understanding underlying intuitions rather than on exhaustively formal presentations. Specific attention will be directed to:
+  <ul>
+    <li>
+      the comparison of the computational power of different models by finding, whenever possible, simulations between them, modulo reasonable encodings.</li>
+  </ul>
+By recognizing that some quite disparate models are computationally equally powerful, we will survey some of the ample empirical evidence that computability is a fundamental concept, the Church-Turing Thesis: every informally computable function is Turing-computable (and equivalently, is definable in Lambda Calculus), modulo reasonable encodings.
+  
+ 
+
+<h3>Lectures</h3>
+
+<ol>
+  <li>
+    <span style="color:firebrick"><em>Introduction and Overview</em></span>
+      (Tuesday, 03/03/2026)
+    
+    <ul>
+      <li>
+        Slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-1.pdf">pdf</a>),
+         with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-1.pdf">pdf</a>)]
+    </ul>
+    
+  <li>
+    <span style="color:firebrick"><em>Post and Turing machines, Turings analysis of computability</em></span>
+      (Wednesday, 04/03/2026)
+    
+    <ul>
+      <li>
+        Slides [with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-2.pdf">pdf</a>)]
+    </ul>
+    
+  <li>
+    <span style="color:firebrick"><em>Busy Beavers</em>, and <em>Basic recursion theory</em></span>
+      (Thursday, 05/03/2026)
+    
+    <ul>
+      <li>
+        Slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-3.pdf">pdf</a>),
+         with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-3.pdf">pdf</a>)]
+    </ul>	
+
+    
+  <li>
+    <span style="color:firebrick"><em>Basic recursion theory (continued)</em>, and <em>Recursive functions</em></span>
+    (Friday, 06/03/2026)
+    
+    <ul>
+      <li>
+        Slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-4.pdf">pdf</a>),
+         with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-4.pdf">pdf</a>)]
+    </ul>	
+   
+
+  <li>
+    <span style="color:firebrick"><em>Lambda Calculus</em></span>
+      (Monday, 09/03/2026)
+ 
+    <ul>
+      <li>
+        Slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-5-handout.pdf">pdf</a>),
+        with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-5.pdf">pdf</a>)]
+      <li>
+	Handout <em>From partial recursive functions to &lambda;-definable functions</em>
+	  (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lambda-definability.pdf">pdf</a>)
+    </ul>
+
+  <li> 
+    <span style="color:firebrick"><em>Three More Models</em></span>
+      (Thursday, 12/03/2026)
+    <ul>
+      <li>
+        Slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-6-handout.pdf">pdf</a>),
+        with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-6.pdf">pdf</a>)]
+    </ul>
+    
+</ol>  
+
+
+<!--
+
+<h4> Lectures (planning) </h4>
+
+
+<ol>
+  <li>
+    <span style="color:firebrick"><em>Introduction and Overview</em></span>
+    
+    <ul>
+      <li>
+        Preliminary slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-1-handout-planning.pdf">pdf</a>),
+         with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-1-planning.pdf">pdf</a>)]
+    </ul>	
+    
+    
+  <li>
+    <span style="color:firebrick"><em>Post and Turing machines, Turings analysis of computability</em></span>
+    
+    <ul>
+      <li>
+        Preliminary slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-2-handout-planning.pdf">pdf</a>),
+         with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-2-planning.pdf">pdf</a>)]
+    </ul>	
+    
+    
+  <li>
+    <span style="color:firebrick"><em>Partial-Recursive Functions</em></span>
+    
+    <ul>
+      <li>
+        Preliminary slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-3-handout-planning.pdf">pdf</a>)
+         with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-3-planning.pdf">pdf</a>)]
+    </ul>	
+
+  <li>
+    <span style="color:firebrick"><em>Lambda Calculus</em></span>
+ 
+    <ul>
+      <li>
+        Preliminary slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-4-handout-planning.pdf">pdf</a>),
+        with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-4-planning.pdf">pdf</a>)]
+      <li>
+	Handout <em>From partial recursive functions to &lambda;-definable functions</em>
+	  (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lambda-definability.pdf">pdf</a>)
+    </ul>
+
+    
+  <li>
+    <span style="color:firebrick"><em>Three More Models</em></span>
+
+    <ul>
+      <li>
+        Preliminary slides [handout version (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-5-handout-planning.pdf">pdf</a>),
+        with overlays (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lecture-5-planning.pdf">pdf</a>)]
+      <li>
+	Handout <em>Reductions between Models of Computation</em>
+	  (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/reductions-between-mocs.pdf">pdf</a>)
+    </ul>	
+     
+</ol>  
+
+
+-->
+
+<h3>Book</h3>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img style="vertical-align:bottom"
+         src="https://clegra.github.io/moc/MF-models-of-computation.jpg"
+         alt="cover of Springer Verlag book Models of Computation by Maribel Fern&aacute;ndez"
+         width="207" height="277">  <!-- 827x1109 -->
+
+<ul>
+  <li>
+  Maribel Fern&aacute;ndez:
+  <em>Models of Computation
+    (An Introduction to Computability Theory)</em>,
+    Springer-Verlag London, 2009.
+</ul> 
+
+
+
+
+<h3>Links to Further Resources</h3>
+
+
+<ul>
+  <li>
+    B&ouml;hm's full precision calculator and Recursive Real Analysis (RRA):
+    <ul>
+      <li>
+	Popular science article by Chad Nauseam (<a href="https://chadnauseam.com/coding/random/calculator-app">link</a>)
+    </ul>  
+  
+  <li>
+    Post machines, and Post's computability `working hypothesis':
+    <ul>
+      <li>
+	Emil Leon Post: "Finite Combinatory Processes&nbsp;&mdash;&nbsp;Formulation 1"
+        (<a href="https://www.wolframscience.com/prizes/tm23/images/Post.pdf">pdf via wolframscience</a>),
+        <em>The Journal of Symbolic Logic</em>, Vol. 1, No. 3. (Sep., 1936), pp. 103-105.
+    </ul>
+
+    
+  <li>
+    Turing, and Turing machines:
+    <ul>
+      <li>
+	Alan M. Turing: "On Computable Numbers, with an Application to the Entscheidungsproblem" 
+        (<a href="http://www.wolframscience.com/prizes/tm23/images/Turing.pdf">pdf via wolframscience</a>),
+        <em>Proceedings of the London Mathematical Society</em>, 1936.
+	
+        <ul>
+          <li> General interest (recent report):
+            <em>Wartime codebreaker Alan Turing’s scientific papers sell for £465,000 at auction</em> (<a href="https://www.theguardian.com/science/2025/jun/17/wartime-codebreaker-alan-turings-scientific-papers-sell-for-465000-at-auction?CMP=bsky_gu">Guardian article</a>, Tue 17 Jun 2025)
+       </ul>
+
+      <li>
+	Mike Davey's Turing Machine ``<em>embodying the classic look and feel of a Turing machine</em>''
+	(<a href="https://www.youtube.com/watch?v=E3keLeMwfHY">link youtube</a>)
+
+      <li>
+	The LEGO Turing Machine
+	(<a href="https://www.youtube.com/watch?v=cYw2ewoO6c4">link youtube</a>)
+
+    </ul>
+
+  <li> Turing test (for general interest concerning the question: <em>Can machines think?</em>, but only indirectly related to this course):
+    <ul>
+      <li>
+	Turing's famous paper, a founding text of Artificial Intelligence:
+	<ul>
+	  <li>
+	    A.M. Turing: "Computing Machinery and Intelligence", Mind: a Quarterly Review of Psychology and Philosophy, volume LIX, N.S., No. 236, October, 1950,
+            [scan (<a href="https://www2.fiit.stuba.sk/~kvasnicka/CognitiveScience/1.prednaska/TuringPaperMind.pdf">pdf via a link in Slovakia</a>)]
+        </ul>		
+    </ul>
+    
+  <li>
+    Busy Beavers:
+
+    <ul>
+      <li>
+	Scott Aaronson:
+	"Why Philosophers Should Care About Computational Complexity",
+	Talk at the University of Austin, Texas, May 2025
+	  (<a href="https://youtu.be/OST1DjD08Hg?si=30QhTbrqIdaERkcL">link youtube</a>).
+	<ul>
+	  <li>
+	    Busy beaver section of his talk:
+	  (<a href="https://youtu.be/OST1DjD08Hg?si=Wsupn3wOqu-OVmT5&amp;t=1351">link youtube</a>).
+        </ul>
+      <li>
+	Scott Aaronson:
+	"The Busy Beaver Frontier", ACM SIGACT News, Volume 51, Issue 3
+           p. 32&mdash;54
+        29 September 2020
+        (<a href="https://doi.org/10.1145/3427361.3427369">
+	  papers page at ACM</a>,
+	 <a href="https://dl.acm.org/doi/pdf/10.1145/3427361.3427369">pdf via ACM</a>).
+    </ul>  
+    
+  <li>
+    Church's Thesis and effective calculability:
+    <ul>
+      <li>
+        A. Church: "An Unsolvable Problem of Elementary Number Theory"
+	 (<a href="https://www.jstor.org/stable/2371045?seq=1">read pdf at JSTOR</a>)
+    </ul>
+	
+  <li>
+    From partial recursive functions to &lambda;-definable functions:
+    <ul>
+      <li> Handout (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/lambda-definability.pdf">pdf</a>).
+    </ul>
+
+  <li>
+    Comparing computational power of models of computation
+    <ul>
+      <li>
+	Handout (<a href="https://clegra.github.io/moc/25-26/Novi-Sad/reductions-between-mocs.pdf">pdf</a>).
+	
+      <li>
+	Udi Boker, and Nachum Dershowitz:
+	"Comparing Computational Power",
+	Logic Journal of the IGPL
+	(<a href="https://arxiv.org/pdf/cs.LO/0510069">pdf report-version via arXiv </a>).
+	
+      <li>
+	J&ouml;rg Endrullis, Clemens Grabmayer, and Dimitri Hendriks:
+	"Regularity-Preserving but not Reflecting Encodings",
+	Proceedings of LICS 2015
+	(<a href="https://clegra.github.io/lf/lics-2015.pdf">pdf</a>,
+	 <a href="http://arxiv.org/pdf/1501.04835">pdf report via arXiv</a>).
+    </ul>
+
+  <li>
+    Post's Correspondence Problem: 
+    <ul>
+      <li>
+	Emil Leon Post:
+	"A Variant of a Recursively Unsolvable Problem",
+	Bulletin of the American Mathematical Society, 1946
+        (<a href="https://projecteuclid.org/journals/bulletin-of-the-american-mathematical-society/volume-52/issue-4/A-variant-of-a-recursively-unsolvable-problem/bams/1183507843.pdf">pdf via projectEuclid</a>).
+    </ul>  
+
+  <li>
+    Interaction Nets:
+    <ul>
+      <li>
+	Yves Lafont: "Interaction Nets", <em>Proceedings of POPL'90</em>, 1990
+	(<a href="https://dl.acm.org/doi/pdf/10.1145/96709.96718">pdf via ACM</a>).
+      <li>
+	Lambdascope:
+	<ul>
+          <li>
+            Vincent van Ostrom,
+	    Kees-Jan van de Looij,
+	    Marijn Zwitserlood: "Lambdascope"
+	    (<a href="http://www.javakade.nl/research/pdf/lambdascope.pdf">pdf via van Oostrom's publication page</a>),
+	  <li>
+	    Jan Rochel: "graph-rewriting-lambdascope",
+	      Lambdascope animation tool, available (<a href="https://hackage.haskell.org/package/graph-rewriting-lambdascope">link</a>) on Haskell Hackage. 
+	</ul>  
+    </ul>	
+
+  <li>
+    Fractran:
+    <ul>
+      <li>
+	John Horton Conway:
+	<ul>
+	  <li> "FRACTRAN: A Simple Universal Programming Language for Arithmetic"
+	    (<a href="https://link.springer.com/chapter/10.1007/978-1-4612-4808-8_2">page for download first 2 pages of article</a>).
+	    
+	  <li> "Fractran: A Ridiculous Logical Language" (<a href="https://www.uctv.tv/shows/Fractran-A-Ridiculous-Logical-Language-with-John-Conway-23320">link talk video at UCTV</a>).
+	  <li> Obituary <em>John Horton Conway, a `Magical Genius', Dies at 82</em> (<a href="https://www.nytimes.com/2020/04/15/technology/john-horton-conway-dead-coronavirus.html">link New York Times</a>).
+	</ul>
+    </ul>  
+
+</ul>
+
+
+
+<hr>
+<address>
+  Clemens Grabmayer
+  /
+  www:
+  <a href="https://clegra.github.io">https://clegra.github.io</a>
+  /
+  mailto:
+  <span style="color:darkgreen">c</span> one dot
+  <span style="color:darkgreen">a</span> one dot
+  <span style="color:darkgreen">grabmayer</span> one at
+  <span style="color:darkgreen">gmail</span> one dot
+  <span style="color:darkgreen">com</span>
+  /
+  Last modified: Sun 15 Mar 2026 19:42 CET
+  /<a href="https://validator.w3.org/check?uri=https%3A%2F%2Fclegra.github.io%2Fmoc%2FNovi-Sad.html"><img
+      src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+  /
+
+</address>
+
+<hr>
+
+</body>
+</html>
